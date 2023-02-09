@@ -21,14 +21,17 @@ public class ReadDataromXCEL {
 		//the below statement throws encryptedDocumentException and IOException
 		Workbook wb= WorkbookFactory.create(fis);
 		//step 3: get control over perticular sheet
-		Sheet s=wb.getSheet("Sheet1");
+		//Sheet s=wb.getSheet("Sheet1");
 		//step4: get control over specific row
-		Row r=s.getRow(0);
+		//Row r=s.getRow(0);
 		//step5: get control over cell
-		Cell c=r.getCell(1);
+		//Cell c=r.getCell(1);
 		//step6: Fetch the data from cell
-		System.out.println(c.getStringCellValue());
-		//step 7: Close workbook
+		//System.out.println(c.getStringCellValue());
+		//step 7: Close workbook*/
+		
+		String data=wb.getSheet("Sheet1").getRow(1).getCell(1).getStringCellValue();
+		System.out.println(data);
 		wb.close();
 
 	}

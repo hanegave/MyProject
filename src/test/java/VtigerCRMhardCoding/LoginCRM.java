@@ -1,4 +1,4 @@
-package VtigerCRM;
+package VtigerCRMhardCoding;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

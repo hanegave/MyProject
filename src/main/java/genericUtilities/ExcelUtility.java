@@ -54,6 +54,7 @@ public class ExcelUtility {
 	public String readDataFromExcel(String sheetName, int rowNum, int cellNum) {
 		
 		Sheet sheet = workbook.getSheet(sheetName);
+		df = new DataFormatter() ;
 		return df.formatCellValue(sheet.getRow(rowNum).getCell(cellNum));
 	}
 
@@ -65,6 +66,7 @@ public class ExcelUtility {
 	 */
 	public Map<String,String> readDataFromExcel(String expectedTestName, String sheetName){
 		Sheet sheet = workbook.getSheet(sheetName);
+		df = new DataFormatter() ;
 		Map<String, String> map = new HashMap<>();
 		for(int i=0; i<= sheet.getLastRowNum();i++) {
 			if(df.formatCellValue(sheet.getRow(i).getCell(1)).equals(expectedTestName)) {
@@ -121,6 +123,7 @@ public class ExcelUtility {
 	 */
 	public void setDataToExcel(String expectedTestName, String status, String path, String sheetName) {
 		Sheet sheet = workbook.getSheet(sheetName);
+	
 		for(int i=0; i< sheet.getLastRowNum();i++) {
 			if(df.formatCellValue(sheet.getRow(i).getCell(1)).contains(expectedTestName)) {
 				sheet.getRow(i).getCell(4).setCellValue(status);
