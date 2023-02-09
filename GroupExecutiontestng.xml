@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<groups>
+		<run>
+			<include name="Sanaty"></include><!-- This statement is to include which group is to execute-->
+		</run>
+	</groups>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="GroupExecution.Secondest" />
+			<class name="GroupExecution.FirstTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
