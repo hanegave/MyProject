@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CrossBrowserDataDrivenBrowserCompartiblityPrgm.CrossBrowserParallelPrgm1">
+      <class name="DependenciesBetweenMethods.DependsOnMethod">
         <methods>
-          <include name="methodTeardown"/>
-          <include name="SeleniumPageTest"/>
-          <include name="methodSetup"/>
+          <include name="loginToActitime"/>
+          <include name="NavigateToActitime"/>
         </methods>
-      </class> <!-- CrossBrowserDataDrivenBrowserCompartiblityPrgm.CrossBrowserParallelPrgm1 -->
+      </class> <!-- DependenciesBetweenMethods.DependsOnMethod -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
